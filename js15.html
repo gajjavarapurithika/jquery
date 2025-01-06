@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>fadeto</title>
+        <script src="file://d:/jquery-3.7.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                $("button").click(function()
+                {
+                    $("#div1").fadeTo("slow",0.3);
+                    $("#div2").fadeTo("slow",0.4);
+                    $("#div3").fadeTo("slow",0.7);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>See the fade to method example</p>
+        <button>Click to fade to boxes</button><br><br>
+        <div id="div1"style="width:100px;height:100px;background-color:red;"></div><br>
+        <div id="div2"style="width:100px;height:100px;background-color:blue;"></div><br>
+        <div id="div3"style="width:100px;height:100px;background-color:green;"></div><br>
+    </body>
+</html>
