@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>submit</title>
+        <script src="file://d:/jquery-3.7.1.js"></script>
+        <style>
+            p
+            {
+                margin:0px;
+                color:blue;
+            }
+            div,p
+            {
+                margin-left:10px;
+            }
+            span
+            {
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Type "java" to submit form finally</p>
+        <form action="javascript:alert('success')";>
+            <div>
+                <input type="text">
+                <input type="submit">
+            </div>
+        </form>
+        <span></span>
+        <script>
+            $("form").submit(function(event)
+            {
+                if($("input").val()==="java")
+                {
+                    $("span").text("form submitted successfully").show();
+                }
+                else
+                {
+                $("span").text("not valid").show().fadeOut(2000);
+                event.preventDefault();
+                }
+            });
+        </script>
+    </body>
+</html>
