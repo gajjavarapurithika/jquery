@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouse enter</title>
+        <script src="file://d:/jquery-3.7.1.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#h1").mouseenter(function()
+                {
+                    $("div").text("Mouse entered on heading").show().fadeOut(2000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="h1">Enter heading:</h1>
+        <div></div>
+    </body>
+</html>
