@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=], initial-scale=1.0">
+        <title>Arithmetic Operations</title>
+        <style>
+            body
+            {
+                background-color: bisque;
+            }
+            table,tr,td
+            {
+                border-collapse:collapse;
+                border-style:none;
+            }
+            .d1
+            {
+                background-color:rosybrown;
+                width:200px;
+                height:100px;
+                margin-left:600px;
+                margin-top:250px;
+                color:aquamarine;
+                box-shadow:4px 4px 4px #000000;
+                padding:20px 20px 20px 20px;
+            }
+            .bts1
+            {
+                border-radius: 5px;
+                background-color:aqua;
+            }
+            .tbs1
+            {
+                border-radius: 5px;
+                background-color:pink;
+                color:rgb(207, 73, 73);
+            }
+        </style>
+        <script src="file://d:/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <form name="fm1">
+            <div class="d1">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="aval">A</label>
+                            <input type="text" name="aval" id="v1" placeholder="a value" required focus class="tbs1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="bval">B</label>
+                            <input type="text" name="bval" id="v2" placeholder="b value" required class="tbs1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cval">C</label>
+                            <input type="text" name="cval" id="v3" placeholder="c value" required class="tbs1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="position:relative;left:20px;">
+                            <input type="button" value="+" class="tbs1" id="add">
+                            <input type="button" value="-" class="tbs1" id="sub">
+                            <input type="button" value="*" class="tbs1" id="mul">
+                            <input type="button" value="/" class="tbs1" id="div">
+                            <input type="button" value="%" class="tbs1" id="mod">
+                            <input type="button" value="reset" class="tbs1" id="reset">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <script>
+            $(document).ready(function()
+            {
+               $("#add").click(function()
+               {
+                var a=parseInt($("#v1").val());
+                var b=parseInt($("#v2").val());
+                var c=a+b;
+                $("#v3").val(c);
+               });
+                $("#sub").click(function()
+                {
+                 var a=parseInt($("#v1").val());
+                 var b=parseInt($("#v2").val());
+                 var c=a-b;
+                 $("#v3").val(c);
+                });
+                $("#mul").click(function()
+                {
+                 var a=parseInt($("#v1").val());
+                 var b=parseInt($("#v2").val());
+                 var c=a*b;
+                 $("#v3").val(c);
+                });
+                $("#div").click(function()
+                {
+                 var a=parseInt($("#v1").val());
+                 var b=parseInt($("#v2").val());
+                 var c=a/b;
+                 $("#v3").val(c);
+                });
+                $("#mod").click(function()
+                {
+                 var a=parseInt($("#v1").val());
+                 var b=parseInt($("#v2").val());
+                 var c=a%b;
+                 $("#v3").val(c);
+                });
+                $("#reset").click(function()
+                {
+                 $("#v1").val("");
+                 $("#v2").val("");
+                 $("#v3").val("");
+                });
+            });
+        </script>
+    </body>
+</html>

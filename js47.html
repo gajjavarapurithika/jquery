@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SI&CI</title>
+        <script src="file://d:/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <form>
+            Principal:<input type="text" id="v1"><br>
+            Time:<input type="text" id="v2"><br>
+            Rate of Interset:<input type="text" id="v3"><br>
+            Payable<input type="text" id="v4"><br>
+            <input type="button" value="Simple Interset" id="calculatesi">
+            <input type="button" value="Compound Interset" id="calculateci">
+            <script>
+                $(document).ready(function()
+                {
+                    $("#calculatesi").click(function()
+                    {
+                       var p=parseInt($("#v1").val());
+                        var t=parseInt($("#v2").val());
+                        var r=parseInt($("#v3").val());
+                        var si=(p*t*r)/100;
+                        $("#v4").val(si);
+                    });
+                    $("#calculateci").click(function()
+                    {
+                        var p=parseInt($("#v1").val());
+                        var t=parseInt($("#v2").val());
+                        var r=parseInt($("#v3").val());
+                        var ci=p*Math.pow(1+r/100,t)-p;
+                        $("#v4").val(ci);
+                    });
+                });
+            </script>
+        </form>
+    </body>
+</html>
